@@ -1,9 +1,15 @@
-<!--home/home.wxml-->
-<text class="title">Hello world</text>
+<!--pages/home/home.wxml-->
+<!-- 1. 小程序的数据绑定 Mustache语法-->
+<view> 姓名: {{name}}</view>
+<view> 年龄: {{age}}</view>
 
 
-<button size="mini">按钮</button>
+<!-- 2.列表展示 -->
+<view>{{students[0].name}}</view>
+<view wx:for ="{{students}}">{{item.name}}---{{item.age}}</view>
 
-<image></image>
-
+<!-- 3.时间监听改变data -->
+<view>当前计数: {{counter}}</view>
+<button size="mini" bindtap="handleBtnClick"> + </button>
+<button size="mini" bindtap="handleBtnClick2"> -  </button>
 
